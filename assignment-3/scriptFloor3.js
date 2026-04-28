@@ -351,6 +351,13 @@ function gameLoop() {
     //ctx.fillText('x:' + ball.x, ball.x - 100, ball.y - 275);
     //ctx.fillText('y:' + ball.y, ball.x - 100, ball.y - 225);
 
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 3;
+    ctx.lineJoin = "round";
+    ctx.strokeText('Time: ' + ((Date.now() - localStorage.getItem('startTime')) / 1000) + 's', ball.x - 350, ball.y + 350);
+    ctx.fillStyle = 'white';
+    ctx.fillText('Time: ' + ((Date.now() - localStorage.getItem('startTime')) / 1000) + 's', ball.x - 350, ball.y + 350);
+
 
 
     ctx.restore();

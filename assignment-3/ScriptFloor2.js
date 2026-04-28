@@ -234,6 +234,14 @@ function gameLoop() {
     ctx.strokeText('Basement', ball.x - 750, ball.y - 325);
     ctx.fillStyle = 'white';
     ctx.fillText('Basement', ball.x - 750, ball.y - 325);
+      ctx.strokeStyle = "black";
+    ctx.lineWidth = 3;
+    ctx.lineJoin = "round";
+    ctx.strokeText('Time: ' + ((Date.now() - localStorage.getItem('startTime')) / 1000) + 's', ball.x - 750, ball.y + 350);
+    ctx.fillStyle = 'white';
+    ctx.fillText('Time: ' + ((Date.now() - localStorage.getItem('startTime')) / 1000) + 's', ball.x - 750, ball.y + 350);
+
+
     //ctx.fillText('x:' + ball.x, ball.x - 750, ball.y - 275);
     //ctx.fillText('y:' + ball.y, ball.x - 750, ball.y - 225);
 

@@ -442,7 +442,7 @@ function gameLoop() {
        ctx.strokeStyle = "black";
     ctx.lineWidth = 3;
     ctx.lineJoin = "round";
-    ctx.strokeText('Floor 1', ball.x - 750, ball.y - 325);
+    ctx.strokeText('Floor 1 ', ball.x - 750, ball.y - 325);
     ctx.fillStyle = 'white';
     ctx.fillText('Floor 1', ball.x - 750, ball.y - 325);
     if(ball.y >= 400 && ball.y <= 950 && ball.x <= 1000){
@@ -488,6 +488,14 @@ function gameLoop() {
     ctx.fillStyle = 'white';
       ctx.fillText("I hope you grabbed your keys...", ball.x + 300, ball.y - 325);
     }
+    
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 3;
+    ctx.lineJoin = "round";
+    ctx.strokeText('Time: ' + ((Date.now() - localStorage.getItem('startTime')) / 1000) + 's', ball.x - 750, ball.y + 350);
+    ctx.fillStyle = 'white';
+    ctx.fillText('Time: ' + ((Date.now() - localStorage.getItem('startTime')) / 1000) + 's', ball.x - 750, ball.y + 350);
+
 
     //ctx.fillText('x:' + ball.x, ball.x - 750, ball.y - 275);
     //ctx.fillText('y:' + ball.y, ball.x - 750, ball.y - 225);

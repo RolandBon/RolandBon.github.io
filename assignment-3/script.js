@@ -312,9 +312,9 @@ function gameLoop() {
     ctx.strokeStyle = "black";
     ctx.lineWidth = 3;
     ctx.lineJoin = "round";
-    ctx.strokeText("Click anywhere to toggle music", ball.x - 750, ball.y + 350);
+    ctx.strokeText("Click anywhere to toggle sound", ball.x - 750, ball.y + 350);
     ctx.fillStyle = 'white';
-    ctx.fillText('Click anywhere to toggle music', ball.x - 750, ball.y + 350);
+    ctx.fillText('Click anywhere to toggle sound', ball.x - 750, ball.y + 350);
 
 
     if (ball.y <= 666) {

@@ -15,9 +15,9 @@ const totalTime = Date.now() - startTime;  //Time it took to complete
 
 const highScore = localStorage.getItem('highScore');
 
-const hs = 0
+let hs = 0
 
-if (!highScore || totalTime < highScore) {
+if (!highScore || totalTime < Number(highScore)) {
     localStorage.setItem('highScore', totalTime);
     hs = 1;
 }
@@ -165,26 +165,26 @@ function gameLoop() {
     ctx.strokeStyle = "black";
     ctx.lineWidth = 3;
     ctx.lineJoin = "round";
-    ctx.strokeText('Your time was: ' + (totalTime / 1000) + 's', ball.x + 430, ball.y - 325);
+    ctx.strokeText('Your time was: ' + (totalTime / 1000) + 's', ball.x + 400, ball.y - 325);
     ctx.fillStyle = 'white';
-    ctx.fillText('Your time was: ' + (totalTime / 1000) + 's', ball.x + 430, ball.y - 325);
+    ctx.fillText('Your time was: ' + (totalTime / 1000) + 's', ball.x + 400, ball.y - 325);
     //High score text
         if(hs == 1) {
           ctx.strokeStyle = "black";
           ctx.lineWidth = 3;
           ctx.lineJoin = "round";
-          ctx.strokeText('New high score!!', ball.x + 320, ball.y - 275);
+          ctx.strokeText('New high score!!', ball.x + 400, ball.y - 275);
           ctx.fillStyle = 'white';
-          ctx.fillText('New high score!!', ball.x + 320, ball.y - 275);
+          ctx.fillText('New high score!!', ball.x + 400, ball.y - 275);
         }
         //No high score text
         if (hs == 0 ) {
           ctx.strokeStyle = "black";
           ctx.lineWidth = 3;
           ctx.lineJoin = "round";
-          ctx.strokeText('Your best time is: ' + (highScore / 1000) + 's' , ball.x + 320, ball.y - 275);
+          ctx.strokeText('Your best time is: ' + (highScore / 1000) + 's' , ball.x + 400, ball.y - 275);
           ctx.fillStyle = 'white';
-          ctx.fillText('Your best time is: ' + (highScore / 1000) + 's' , ball.x + 320, ball.y - 275);
+          ctx.fillText('Your best time is: ' + (highScore / 1000) + 's' , ball.x + 400, ball.y - 275);
 
         }
     }
@@ -193,9 +193,9 @@ function gameLoop() {
     ctx.strokeStyle = "black";
     ctx.lineWidth = 3;
     ctx.lineJoin = "round";
-    ctx.strokeText('Feel free to try again for a better time', ball.x + 320, ball.y - 325);
+    ctx.strokeText('Feel free to try again for a better time', ball.x + 300, ball.y - 325);
     ctx.fillStyle = 'white';
-    ctx.fillText('Feel free to try again for a better time', ball.x + 320, ball.y - 325);
+    ctx.fillText('Feel free to try again for a better time', ball.x + 300, ball.y - 325);
 
     }
 
