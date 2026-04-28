@@ -127,9 +127,9 @@ function gameLoop() {
     ctx.strokeStyle = "black";
     ctx.lineWidth = 3;
     ctx.lineJoin = "round";
-    ctx.strokeText('Congradulations on escaping!', ball.x + 400, ball.y - 325);
+    ctx.strokeText('Congradulations on escaping', ball.x + 400, ball.y - 325);
     ctx.fillStyle = 'white';
-    ctx.fillText('Congradulations on escaping!', ball.x + 400, ball.y - 325);
+    ctx.fillText('Congradulations on escaping', ball.x + 400, ball.y - 325);
     }
 
      if(ball.x >= 1000 && ball.x < 2000) {
@@ -144,9 +144,9 @@ function gameLoop() {
     ctx.strokeStyle = "black";
     ctx.lineWidth = 3;
     ctx.lineJoin = "round";
-    ctx.strokeText('As I had fun making this!', ball.x + 430, ball.y - 325);
+    ctx.strokeText('As I had fun making this', ball.x + 430, ball.y - 325);
     ctx.fillStyle = 'white';
-    ctx.fillText('As I had fun making this!', ball.x + 430, ball.y - 325);
+    ctx.fillText('As I had fun making this', ball.x + 430, ball.y - 325);
     }
 
     if(ball.x >= 3000) {
