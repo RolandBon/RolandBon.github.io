@@ -335,9 +335,9 @@ function gameLoop() {
       ctx.strokeStyle = "black";
     ctx.lineWidth = 3;
     ctx.lineJoin = "round";
-    ctx.strokeText('One last section!', ball.x + 900, ball.y - 325);
+    ctx.strokeText('One last section', ball.x + 900, ball.y - 325);
     ctx.fillStyle = 'white';
-      ctx.fillText('One last section!', ball.x + 900, ball.y - 325);
+      ctx.fillText('One last section', ball.x + 900, ball.y - 325);
      }
   if(ball.x >= 20100){
       ctx.strokeStyle = "black";

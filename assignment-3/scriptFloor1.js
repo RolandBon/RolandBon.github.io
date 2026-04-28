@@ -450,27 +450,27 @@ function gameLoop() {
     ctx.lineWidth = 3;
     ctx.lineJoin = "round";
     ctx.strokeText('Hit the', ball.x + 400, ball.y - 325);
-    ctx.strokeText('green checkpoints!', ball.x + 500, ball.y - 325);
+    ctx.strokeText('green checkpoints', ball.x + 500, ball.y - 325);
     ctx.fillStyle = 'white';
       ctx.fillText('Hit the', ball.x + 400, ball.y - 325);
       ctx.fillStyle = 'green'
-      ctx.fillText('green checkpoints!', ball.x + 500, ball.y - 325);
+      ctx.fillText('green checkpoints', ball.x + 500, ball.y - 325);
     }
     if(ball.y >= 3150 && ball.x <= 1000){
          ctx.strokeStyle = "black";
     ctx.lineWidth = 3;
     ctx.lineJoin = "round";
-    ctx.strokeText("Don't forget the key below!", ball.x + 400, ball.y - 325);
+    ctx.strokeText("Don't forget the key below", ball.x + 400, ball.y - 325);
     ctx.fillStyle = 'white';
-      ctx.fillText("Don't forget the key below!", ball.x + 400, ball.y - 325);
+      ctx.fillText("Don't forget the key below", ball.x + 400, ball.y - 325);
     }
     if(ball.y >= 3100 && ball.x >= 3100){
          ctx.strokeStyle = "black";
     ctx.lineWidth = 3;
     ctx.lineJoin = "round";
-    ctx.strokeText("You're almost there!", ball.x + 400, ball.y - 325);
+    ctx.strokeText("You're almost there", ball.x + 400, ball.y - 325);
     ctx.fillStyle = 'white';
-      ctx.fillText("You're almost there!", ball.x + 400, ball.y - 325);
+      ctx.fillText("You're almost there", ball.x + 400, ball.y - 325);
     }
     if(ball.x >= 3000 && ball.y <= 500){
          ctx.strokeStyle = "black";
