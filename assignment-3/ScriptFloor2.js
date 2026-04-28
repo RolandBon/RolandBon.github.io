@@ -10,6 +10,9 @@ const worldW = 2000;
 const worldH = 1300;
 const wall = 20;
 
+localStorage.setItem('startTime', Date.now()); //Begin timer for score
+
+
 const codes = {};
 document.addEventListener("keydown", e => codes[e.code] = true);
 document.addEventListener("keyup", e => codes[e.code] = false);

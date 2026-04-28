@@ -10,6 +10,18 @@ const worldW = 4200;
 const worldH = 2000;
 const wall = 20;
 
+const startTime = localStorage.getItem('startTime');
+const totalTime = Date.now() - startTime;  //Time it took to complete
+
+const highScore = localStorage.getItem('highScore');
+
+const hs = 0
+
+if (!highScore || totalTime < highScore) {
+    localStorage.setItem('highScore', totalTime);
+    hs = 1;
+}
+
 const codes = {};
 document.addEventListener("keydown", e => codes[e.code] = true);
 document.addEventListener("keyup", e => codes[e.code] = false);
@@ -123,7 +135,7 @@ function gameLoop() {
     ctx.strokeText('Outside', ball.x - 750, ball.y - 325);
     ctx.fillStyle = 'white';
     ctx.fillText('Outside', ball.x - 750, ball.y - 325);
-    if(ball.x < 1000) {
+    if(ball.x < 800) {
     ctx.strokeStyle = "black";
     ctx.lineWidth = 3;
     ctx.lineJoin = "round";
@@ -132,15 +144,15 @@ function gameLoop() {
     ctx.fillText('Congradulations on escaping', ball.x + 400, ball.y - 325);
     }
 
-     if(ball.x >= 1000 && ball.x < 2000) {
+     if(ball.x >= 800 && ball.x < 1600) {
     ctx.strokeStyle = "black";
     ctx.lineWidth = 3;
     ctx.lineJoin = "round";
-    ctx.strokeText('I hope you had fun playing through', ball.x + 330, ball.y - 325);
+    ctx.strokeText('I hope you had fun playing', ball.x + 350, ball.y - 325);
     ctx.fillStyle = 'white';
-    ctx.fillText('I hope you had fun playing through', ball.x + 330, ball.y - 325);
+    ctx.fillText('I hope you had fun playing', ball.x + 350, ball.y - 325);
     }
-  if(ball.x >= 2000 && ball.x < 3000) {
+  if(ball.x >= 1600 && ball.x < 2400) {
     ctx.strokeStyle = "black";
     ctx.lineWidth = 3;
     ctx.lineJoin = "round";
@@ -149,14 +161,44 @@ function gameLoop() {
     ctx.fillText('As I had fun making this', ball.x + 430, ball.y - 325);
     }
 
-    if(ball.x >= 3000) {
+    if(ball.x >= 2400 && ball.x < 3200) {
     ctx.strokeStyle = "black";
     ctx.lineWidth = 3;
     ctx.lineJoin = "round";
-    ctx.strokeText('And feel free to jump right back in!', ball.x + 320, ball.y - 325);
+    ctx.strokeText('Your time was: ' + (totalTime / 1000) + 's', ball.x + 430, ball.y - 325);
     ctx.fillStyle = 'white';
-    ctx.fillText('And feel free to jump right back in!', ball.x + 320, ball.y - 325);
+    ctx.fillText('Your time was: ' + (totalTime / 1000) + 's', ball.x + 430, ball.y - 325);
+    //High score text
+        if(hs == 1) {
+          ctx.strokeStyle = "black";
+          ctx.lineWidth = 3;
+          ctx.lineJoin = "round";
+          ctx.strokeText('New high score!!', ball.x + 320, ball.y - 275);
+          ctx.fillStyle = 'white';
+          ctx.fillText('New high score!!', ball.x + 320, ball.y - 275);
+        }
+        //No high score text
+        if (hs == 0 ) {
+          ctx.strokeStyle = "black";
+          ctx.lineWidth = 3;
+          ctx.lineJoin = "round";
+          ctx.strokeText('Your best time is: ' + (highScore / 1000) + 's' , ball.x + 320, ball.y - 275);
+          ctx.fillStyle = 'white';
+          ctx.fillText('Your best time is: ' + (highScore / 1000) + 's' , ball.x + 320, ball.y - 275);
+
+        }
     }
+
+    if(ball.x >= 3200) {
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 3;
+    ctx.lineJoin = "round";
+    ctx.strokeText('Feel free to try again for a better time', ball.x + 320, ball.y - 325);
+    ctx.fillStyle = 'white';
+    ctx.fillText('Feel free to try again for a better time', ball.x + 320, ball.y - 325);
+
+    }
+
 
 
       //ctx.fillText("Congradulations You Escaped! I hope you had fun escaping Equad, as I had fun making this! And if you're itching for more, feel free to hop back in", 100, -50);
