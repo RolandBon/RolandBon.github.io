@@ -321,9 +321,9 @@ function gameLoop() {
       ctx.strokeStyle = "black";
     ctx.lineWidth = 3;
     ctx.lineJoin = "round";
-    ctx.strokeText("You're trapped in here on a bright sunny day!", ball.x + 200, ball.y - 325);
+    ctx.strokeText("You're trapped in here on a bright sunny day", ball.x + 200, ball.y - 325);
     ctx.fillStyle = 'white';
-      ctx.fillText("You're trapped in here on a bright sunny day!", ball.x + 200, ball.y - 325);
+      ctx.fillText("You're trapped in here on a bright sunny day", ball.x + 200, ball.y - 325);
     }
     if (666 < ball.y && ball.y <= 1333) {
         ctx.strokeStyle = "black";
